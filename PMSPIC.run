@@ -1,0 +1,13 @@
+reset;
+model PMSPIC.mod;
+data PMSPIC.dat;
+data M1.dat;
+
+option solver cplexamp;
+option presolve 0;
+option cplex_options 'mipgap = 0.01';
+solve;
+
+display _solve_time;
+option omit_zero_rows 1;
+display x;

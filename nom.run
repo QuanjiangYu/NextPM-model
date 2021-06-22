@@ -1,0 +1,14 @@
+reset;
+model nom.mod;
+data nom.dat;
+#data D10.dat;
+data w5.dat;
+#data dt.dat;
+#data ds.dat;
+data dw.dat;
+option solver cplexamp;
+option presolve 0;
+solve;
+display _solve_time;
+option omit_zero_rows 1;
+display x;
